@@ -13,6 +13,7 @@
 		1C782C042ACFF80B00520C4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C782C022ACFF80B00520C4A /* Main.storyboard */; };
 		1C782C062ACFF80E00520C4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C782C052ACFF80E00520C4A /* Assets.xcassets */; };
 		1C782C092ACFF80E00520C4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C782C072ACFF80E00520C4A /* LaunchScreen.storyboard */; };
+		1C782C152AD0E4D000520C4A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C782C142AD0E4D000520C4A /* GoogleService-Info.plist */; };
 		3A5D682EFEBC87F456562612 /* Pods_PracticeFirebaseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD832006D05416BC79801DF1 /* Pods_PracticeFirebaseUI.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		1C782C052ACFF80E00520C4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C782C082ACFF80E00520C4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C782C0A2ACFF80E00520C4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C782C142AD0E4D000520C4A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		338668D5A577063AC939F440 /* Pods-PracticeFirebaseUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeFirebaseUI.debug.xcconfig"; path = "Target Support Files/Pods-PracticeFirebaseUI/Pods-PracticeFirebaseUI.debug.xcconfig"; sourceTree = "<group>"; };
 		669FF4FD53EA90585EB9A8EA /* Pods-PracticeFirebaseUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeFirebaseUI.release.xcconfig"; path = "Target Support Files/Pods-PracticeFirebaseUI/Pods-PracticeFirebaseUI.release.xcconfig"; sourceTree = "<group>"; };
 		DD832006D05416BC79801DF1 /* Pods_PracticeFirebaseUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PracticeFirebaseUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +71,7 @@
 				1C782C022ACFF80B00520C4A /* Main.storyboard */,
 				1C782C052ACFF80E00520C4A /* Assets.xcassets */,
 				1C782C072ACFF80E00520C4A /* LaunchScreen.storyboard */,
+				1C782C142AD0E4D000520C4A /* GoogleService-Info.plist */,
 				1C782C0A2ACFF80E00520C4A /* Info.plist */,
 			);
 			path = PracticeFirebaseUI;
@@ -155,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C782C092ACFF80E00520C4A /* LaunchScreen.storyboard in Resources */,
+				1C782C152AD0E4D000520C4A /* GoogleService-Info.plist in Resources */,
 				1C782C062ACFF80E00520C4A /* Assets.xcassets in Resources */,
 				1C782C042ACFF80B00520C4A /* Main.storyboard in Resources */,
 			);

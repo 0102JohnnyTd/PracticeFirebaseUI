@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>696239778402-62pb9u4fcoes3hbmu92480tf73445hfo.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.696239778402-62pb9u4fcoes3hbmu92480tf73445hfo</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBkXMR0pZnuNh8jbXQ2f1i2K38E1FVZ8hA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>696239778402</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.otoufujohnny.SetsuyakuChallenge</string>
+	<key>PROJECT_ID</key>
+	<string>setsuyakuchallenge</string>
+	<key>STORAGE_BUCKET</key>
+	<string>setsuyakuchallenge.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:696239778402:ios:821cb7ac9600260a1eff3b</string>
+</dict>
+</plist>
