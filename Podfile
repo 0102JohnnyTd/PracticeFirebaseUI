@@ -6,7 +6,16 @@ target 'PracticeFirebaseUI' do
   use_frameworks!
 
   # Pods for PracticeFirebaseUI
-  pod 'FirebaseUI', '~> 8.0'       # Pull in all Firebase UI features
+  pod 'FirebaseUI'       # Pull in all Firebase UI features
 
 
+  # Post install
+  post_install do |installer|
+    #iOS deployment version
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0'
+      end
+    end
+  end
 end
