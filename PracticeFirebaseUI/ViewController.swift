@@ -37,6 +37,8 @@ final class ViewController: UIViewController, FUIAuthDelegate {
     private func showAuthVC() {
         guard let authUI = authUI else { fatalError("AuthUI Error") }
         let authVC = authUI.authViewController()
+        authVC.modalPresentationStyle = .fullScreen
+        
         present(authVC, animated: true)
     }
 
