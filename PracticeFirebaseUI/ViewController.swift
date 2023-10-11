@@ -21,6 +21,7 @@ final class ViewController: UIViewController, FUIAuthDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        setUpUI()
         setUpFirebaseUI()
     }
 
@@ -38,8 +39,12 @@ final class ViewController: UIViewController, FUIAuthDelegate {
         guard let authUI = authUI else { fatalError("AuthUI Error") }
         let authVC = authUI.authViewController()
         authVC.modalPresentationStyle = .fullScreen
-        
+
         present(authVC, animated: true)
     }
 
+    private func setUpUI() {
+        guard let authUI = authUI else { fatalError("AuthUI Error") }
+        authUI.shouldHideCancelButton = true
+    }
 }
