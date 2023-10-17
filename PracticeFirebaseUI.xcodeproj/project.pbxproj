@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C112D5E2AD9192200C9FB3B /* CustomAuthPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C112D5D2AD9192200C9FB3B /* CustomAuthPickerViewController.swift */; };
+		1C112DBF2AD95E0700C9FB3B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C112DBE2AD95E0700C9FB3B /* GoogleService-Info.plist */; };
 		1C782BFD2ACFF80B00520C4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782BFC2ACFF80B00520C4A /* AppDelegate.swift */; };
 		1C782BFF2ACFF80B00520C4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782BFE2ACFF80B00520C4A /* SceneDelegate.swift */; };
 		1C782C012ACFF80B00520C4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C002ACFF80B00520C4A /* ViewController.swift */; };
 		1C782C042ACFF80B00520C4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C782C022ACFF80B00520C4A /* Main.storyboard */; };
 		1C782C062ACFF80E00520C4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C782C052ACFF80E00520C4A /* Assets.xcassets */; };
 		1C782C092ACFF80E00520C4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C782C072ACFF80E00520C4A /* LaunchScreen.storyboard */; };
-		1C782C152AD0E4D000520C4A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C782C142AD0E4D000520C4A /* GoogleService-Info.plist */; };
+		1CB3F8932ADBFA77007C381A /* FirebaseAuthUI.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1CB3F8912ADBFA77007C381A /* FirebaseAuthUI.strings */; };
 		3A5D682EFEBC87F456562612 /* Pods_PracticeFirebaseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD832006D05416BC79801DF1 /* Pods_PracticeFirebaseUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C112D5D2AD9192200C9FB3B /* CustomAuthPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAuthPickerViewController.swift; sourceTree = "<group>"; };
+		1C112DBE2AD95E0700C9FB3B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1C782BF92ACFF80B00520C4A /* PracticeFirebaseUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticeFirebaseUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C782BFC2ACFF80B00520C4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C782BFE2ACFF80B00520C4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,7 +30,9 @@
 		1C782C052ACFF80E00520C4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C782C082ACFF80E00520C4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C782C0A2ACFF80E00520C4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1C782C142AD0E4D000520C4A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1CB3F88D2ADB89AA007C381A /* ja-JP */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ja-JP"; path = "ja-JP.lproj/Main.strings"; sourceTree = "<group>"; };
+		1CB3F88E2ADB89AB007C381A /* ja-JP */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ja-JP"; path = "ja-JP.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		1CB3F8922ADBFA77007C381A /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = FirebaseAuthUI.strings; sourceTree = "<group>"; };
 		338668D5A577063AC939F440 /* Pods-PracticeFirebaseUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeFirebaseUI.debug.xcconfig"; path = "Target Support Files/Pods-PracticeFirebaseUI/Pods-PracticeFirebaseUI.debug.xcconfig"; sourceTree = "<group>"; };
 		669FF4FD53EA90585EB9A8EA /* Pods-PracticeFirebaseUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeFirebaseUI.release.xcconfig"; path = "Target Support Files/Pods-PracticeFirebaseUI/Pods-PracticeFirebaseUI.release.xcconfig"; sourceTree = "<group>"; };
 		DD832006D05416BC79801DF1 /* Pods_PracticeFirebaseUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PracticeFirebaseUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,13 +74,23 @@
 				1C782BFC2ACFF80B00520C4A /* AppDelegate.swift */,
 				1C782BFE2ACFF80B00520C4A /* SceneDelegate.swift */,
 				1C782C002ACFF80B00520C4A /* ViewController.swift */,
+				1C112D5D2AD9192200C9FB3B /* CustomAuthPickerViewController.swift */,
 				1C782C022ACFF80B00520C4A /* Main.storyboard */,
 				1C782C052ACFF80E00520C4A /* Assets.xcassets */,
 				1C782C072ACFF80E00520C4A /* LaunchScreen.storyboard */,
-				1C782C142AD0E4D000520C4A /* GoogleService-Info.plist */,
 				1C782C0A2ACFF80E00520C4A /* Info.plist */,
+				1C112DBE2AD95E0700C9FB3B /* GoogleService-Info.plist */,
+				1CB3F8902ADBFA77007C381A /* ja.lproj */,
 			);
 			path = PracticeFirebaseUI;
+			sourceTree = "<group>";
+		};
+		1CB3F8902ADBFA77007C381A /* ja.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				1CB3F8912ADBFA77007C381A /* FirebaseAuthUI.strings */,
+			);
+			path = ja.lproj;
 			sourceTree = "<group>";
 		};
 		1F3F753C6E27639B17A4D6F4 /* Frameworks */ = {
@@ -133,11 +149,12 @@
 			};
 			buildConfigurationList = 1C782BF42ACFF80B00520C4A /* Build configuration list for PBXProject "PracticeFirebaseUI" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ja;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				"ja-JP",
+				ja,
 			);
 			mainGroup = 1C782BF02ACFF80B00520C4A;
 			productRefGroup = 1C782BFA2ACFF80B00520C4A /* Products */;
@@ -154,8 +171,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CB3F8932ADBFA77007C381A /* FirebaseAuthUI.strings in Resources */,
 				1C782C092ACFF80E00520C4A /* LaunchScreen.storyboard in Resources */,
-				1C782C152AD0E4D000520C4A /* GoogleService-Info.plist in Resources */,
+				1C112DBF2AD95E0700C9FB3B /* GoogleService-Info.plist in Resources */,
 				1C782C062ACFF80E00520C4A /* Assets.xcassets in Resources */,
 				1C782C042ACFF80B00520C4A /* Main.storyboard in Resources */,
 			);
@@ -211,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C782C012ACFF80B00520C4A /* ViewController.swift in Sources */,
+				1C112D5E2AD9192200C9FB3B /* CustomAuthPickerViewController.swift in Sources */,
 				1C782BFD2ACFF80B00520C4A /* AppDelegate.swift in Sources */,
 				1C782BFF2ACFF80B00520C4A /* SceneDelegate.swift in Sources */,
 			);
@@ -223,6 +242,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				1C782C032ACFF80B00520C4A /* Base */,
+				1CB3F88D2ADB89AA007C381A /* ja-JP */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -231,8 +251,17 @@
 			isa = PBXVariantGroup;
 			children = (
 				1C782C082ACFF80E00520C4A /* Base */,
+				1CB3F88E2ADB89AB007C381A /* ja-JP */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1CB3F8912ADBFA77007C381A /* FirebaseAuthUI.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1CB3F8922ADBFA77007C381A /* ja */,
+			);
+			name = FirebaseAuthUI.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
