@@ -29,6 +29,7 @@
 		1C782C052ACFF80E00520C4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C782C082ACFF80E00520C4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C782C0A2ACFF80E00520C4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C97C7762AE3DED900B35225 /* PracticeFirebaseUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PracticeFirebaseUI.entitlements; sourceTree = "<group>"; };
 		1CA60C822AE1630A000E5285 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1CB3F88D2ADB89AA007C381A /* ja-JP */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ja-JP"; path = "ja-JP.lproj/Main.strings"; sourceTree = "<group>"; };
 		1CB3F88E2ADB89AB007C381A /* ja-JP */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ja-JP"; path = "ja-JP.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -71,6 +72,7 @@
 		1C782BFB2ACFF80B00520C4A /* PracticeFirebaseUI */ = {
 			isa = PBXGroup;
 			children = (
+				1C97C7762AE3DED900B35225 /* PracticeFirebaseUI.entitlements */,
 				1C782BFC2ACFF80B00520C4A /* AppDelegate.swift */,
 				1C782BFE2ACFF80B00520C4A /* SceneDelegate.swift */,
 				1C782C002ACFF80B00520C4A /* ViewController.swift */,
@@ -392,6 +394,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PracticeFirebaseUI/PracticeFirebaseUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WY23RUM8JH;
@@ -423,6 +426,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PracticeFirebaseUI/PracticeFirebaseUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WY23RUM8JH;
