@@ -22,30 +22,6 @@ final class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureLocalization()
-        setUpFirebaseUI()
-    }
-
-
-    // 機能してない。
-    private func configureLocalization(){
-        if let bundlePath = Bundle.main.path(forResource: "FirebaseAuthUI", ofType: "strings") {
-            print("bundlePathの中身：", bundlePath)
-            let bundle = Bundle(path: bundlePath)
-
-            authUI?.customStringsBundle = bundle
-            print(authUI?.customStringsBundle)
-        }
-    }
-
-    private func setUpFirebaseUI() {
-        guard let authUI else { fatalError("AuthUI Error") }
-        authUI.delegate = self
-
-        authUI.providers = [
-            FUIGoogleAuth(authUI: authUI),
-            FUIOAuth.appleAuthProvider()
-        ]
     }
 
     private func showAuthVC() {
