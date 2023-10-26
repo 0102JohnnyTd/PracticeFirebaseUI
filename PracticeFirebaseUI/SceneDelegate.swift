@@ -19,21 +19,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, FUIAuthDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-//        guard let _ = (scene as? UIWindowScene) else { return }
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
         let authUI = FUIAuth.defaultAuthUI()
         guard let authUI = authUI else { return }
-        authUI.delegate = self
+        
         authUI.providers = [
             FUIGoogleAuth(authUI: authUI),
             FUIOAuth.appleAuthProvider()
         ]
-        
-//        authUI.delegate = self
+
         window = UIWindow(windowScene: windowScene)
         window?.makeKeyAndVisible()
-        window?.rootViewController = CustomAuthPickerViewController(authUI: authUI)
+        guard let _ = Auth.auth().currentUser else {
+            // ログアウト状態の場合はrootViewControllerをログイン画面に
+            window?.rootViewController = CustomAuthPickerViewController(authUI: authUI)
+            return
+        }
+        // ログイン状態の場合はrootViewControllerをホーム画面に
+        window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
