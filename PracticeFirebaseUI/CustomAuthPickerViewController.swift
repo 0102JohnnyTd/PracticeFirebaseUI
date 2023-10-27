@@ -32,8 +32,11 @@ final class CustomAuthPickerViewController: FUIAuthPickerViewController {
     private func configureLabel() {
         label.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(label)
-        label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        // 😼この一行で全てのAutoLayoutに.isActive = trueを一括で指定できる
+        NSLayoutConstraint.activate([
+            label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            label.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
     }
 
     private func configureButtons() {
