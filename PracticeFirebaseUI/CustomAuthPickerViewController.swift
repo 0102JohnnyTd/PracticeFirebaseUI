@@ -9,8 +9,16 @@ import Foundation
 import FirebaseAuthUI
 
 final class CustomAuthPickerViewController: FUIAuthPickerViewController {
+    private lazy var label =  {
+        let label = UILabel()
+        label.text = "ログイン&アカウント作成"
+        label.font = UIFont(name: "Hiragino Sans", size: 20)
+        return label
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureLabel()
         configureButtons()
         authUI.delegate = self
     }
@@ -18,6 +26,14 @@ final class CustomAuthPickerViewController: FUIAuthPickerViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setUpUI()
+    }
+
+    /// ラベルを生成して画面中央に配置
+    private func configureLabel() {
+        label.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(label)
+        label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
 
     private func configureButtons() {
