@@ -14,19 +14,13 @@ final class CustomAuthPickerViewController: FUIAuthPickerViewController {
         configureButtons()
     }
 
-
-
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setUpUI()
-//        Auth.auth().languageCode = "jp"
-
     }
 
-    
-
     private func configureButtons() {
-        guard let buttons = self.view.subviews.first?.subviews.first?.subviews.first?.subviews as? [UIButton] else { return }
+        guard let buttons = self.view.subviews.first?.subviews.first?.subviews.first?.subviews else { return }
         let titles = ["Googleでログイン", "Appleでログイン"]
 
         for (index, _) in zip(titles.indices, titles) {
@@ -37,6 +31,7 @@ final class CustomAuthPickerViewController: FUIAuthPickerViewController {
             }
         }
     }
+
     private func setUpUI() {
         self.navigationController?.navigationBar.isHidden = true
     }
