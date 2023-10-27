@@ -12,6 +12,7 @@ final class CustomAuthPickerViewController: FUIAuthPickerViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureButtons()
+        authUI.delegate = self
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -34,5 +35,23 @@ final class CustomAuthPickerViewController: FUIAuthPickerViewController {
 
     private func setUpUI() {
         self.navigationController?.navigationBar.isHidden = true
+    }
+}
+
+extension CustomAuthPickerViewController: FUIAuthDelegate {
+    // サインイン・サインアップ完了後に実行する処理
+    func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {
+        if let result = user {
+            // ログイン成功処理
+            let homeVC = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! ViewController
+
+            homeVC.modalTransitionStyle = .crossDissolve
+            homeVC.modalPresentationStyle = .fullScreen
+
+            present(homeVC, animated: true)
+        } else {
+            // ログイン失敗処理
+            print("LoginFailure")
+        }
     }
 }
