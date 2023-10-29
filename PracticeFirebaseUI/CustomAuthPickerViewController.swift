@@ -40,6 +40,14 @@ final class CustomAuthPickerViewController: FUIAuthPickerViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        print("hogehoge")
+        guard let buttons = self.view.subviews.first?.subviews.first?.subviews.first?.subviews else { return }
+        if let googleButton = buttons[0] as? UIButton {
+//            // アイコンにアクセスするコード
+//            print(googleButton.subviews)
+//            // ラベルにアクセスするコード
+//            print(googleButton.titleLabel)
+        }
         configureStackView()
         configureButtons()
         authUI.delegate = self
@@ -72,6 +80,33 @@ final class CustomAuthPickerViewController: FUIAuthPickerViewController {
                 button.layer.masksToBounds = true
             }
         }
+
+        guard let googleButton = buttons[0] as? UIButton else { return }
+        let googleIcon = googleButton.subviews[0]
+        let googleLabel = googleButton.subviews[1]
+        googleIcon.translatesAutoresizingMaskIntoConstraints = false
+        // 😨Labelの.translatesAutoresizingMaskIntoConstraintsにfalseを代入した時点で『Unable to simultaneously satisfy constraints.』が発生するようになる。
+//        googleLabel.translatesAutoresizingMaskIntoConstraints = false
+
+        guard let appleButton = buttons[1] as? UIButton else{ return }
+        let appleIcon = appleButton.subviews[0]
+        let appleLabel = appleButton.subviews[1]
+        appleIcon.translatesAutoresizingMaskIntoConstraints = false
+        // 😨Labelの.translatesAutoresizingMaskIntoConstraintsにfalseを代入した時点で『Unable to simultaneously satisfy constraints.』が発生するようになる。
+//        appleLabel.translatesAutoresizingMaskIntoConstraints = false
+
+        // AutoLayoutを実装
+        NSLayoutConstraint.activate([
+            googleIcon.centerYAnchor.constraint(equalTo: googleButton.centerYAnchor),
+            googleIcon.leadingAnchor.constraint(equalTo: googleButton.leadingAnchor, constant: 40),
+//            googleLabel.centerYAnchor.constraint(equalTo: googleButton.centerYAnchor),
+//            googleLabel.leadingAnchor.constraint(equalTo: googleIcon.trailingAnchor),
+
+            appleIcon.centerYAnchor.constraint(equalTo: appleButton.centerYAnchor),
+            appleIcon.leadingAnchor.constraint(equalTo: appleButton.leadingAnchor, constant: 40),
+//            appleLabel.centerYAnchor.constraint(equalTo: appleButton.centerYAnchor),
+//            appleLabel.leadingAnchor.constraint(equalTo: appleIcon.trailingAnchor)
+        ])
     }
 
     private func setUpUI() {
