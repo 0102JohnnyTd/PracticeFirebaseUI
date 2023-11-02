@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1C112D5E2AD9192200C9FB3B /* CustomAuthPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C112D5D2AD9192200C9FB3B /* CustomAuthPickerViewController.swift */; };
+		1C2715792AEFB2FB00FA11D1 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2715782AEFB2FA00FA11D1 /* UIView+.swift */; };
 		1C782BFD2ACFF80B00520C4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782BFC2ACFF80B00520C4A /* AppDelegate.swift */; };
 		1C782BFF2ACFF80B00520C4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782BFE2ACFF80B00520C4A /* SceneDelegate.swift */; };
 		1C782C012ACFF80B00520C4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C782C002ACFF80B00520C4A /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		1C112D5D2AD9192200C9FB3B /* CustomAuthPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAuthPickerViewController.swift; sourceTree = "<group>"; };
+		1C2715782AEFB2FA00FA11D1 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		1C782BF92ACFF80B00520C4A /* PracticeFirebaseUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticeFirebaseUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C782BFC2ACFF80B00520C4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C782BFE2ACFF80B00520C4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				1C97C7762AE3DED900B35225 /* PracticeFirebaseUI.entitlements */,
 				1C782BFC2ACFF80B00520C4A /* AppDelegate.swift */,
 				1C782BFE2ACFF80B00520C4A /* SceneDelegate.swift */,
+				1C2715782AEFB2FA00FA11D1 /* UIView+.swift */,
 				1C782C002ACFF80B00520C4A /* ViewController.swift */,
 				1C112D5D2AD9192200C9FB3B /* CustomAuthPickerViewController.swift */,
 				1C782C022ACFF80B00520C4A /* Main.storyboard */,
@@ -234,6 +237,7 @@
 				1C112D5E2AD9192200C9FB3B /* CustomAuthPickerViewController.swift in Sources */,
 				1C782BFD2ACFF80B00520C4A /* AppDelegate.swift in Sources */,
 				1C782BFF2ACFF80B00520C4A /* SceneDelegate.swift in Sources */,
+				1C2715792AEFB2FB00FA11D1 /* UIView+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +325,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -378,7 +382,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -406,7 +410,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -438,7 +442,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
