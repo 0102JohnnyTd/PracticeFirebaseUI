@@ -64,22 +64,20 @@ final class CustomAuthPickerViewController: FUIAuthPickerViewController {
         button.layer.cornerRadius = 20.0
         button.layer.masksToBounds = true
 
-        // ボタンのラベルが『"Sign in with Google"』なら『"Googleで続ける"』に変更する
-        // ⚠️仕様変更でキーワードが一致しなくなった場合、Googleボタンに『"Appleで続ける"』がセットされるとんでもない事態になりかねない。
-        // 🚨ローカライズのことを考慮できてない。
-        if button.titleLabel?.text == "Sign in with Google" {
+        // FIXME: 認証機能が増えるほどコードが膨張してしまう問題
+        if button.titleLabel!.text!.contains("Google") {
             var string = AttributedString(stringLiteral: "Googleで続ける")
             string.font = .systemFont(ofSize: 12, weight: .semibold)
 
             button.configurationUpdateHandler = { button in
                 //            string.foregroundColor = .green
-                string.foregroundColor = .black.withAlphaComponent(
+                string.foregroundColor = .gray.withAlphaComponent(
                     button.state == .highlighted ? 1.0 : 1.0
                 )
                 configuration.attributedTitle = string
                 button.configuration = configuration
             }
-        } else {
+        } else if button.titleLabel!.text!.contains("Apple") {
             var string = AttributedString(stringLiteral: "Appleで続ける")
             string.font = .systemFont(ofSize: 12, weight: .semibold)
 
