@@ -40,17 +40,57 @@ final class CustomAuthPickerViewController: FUIAuthPickerViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        print("hogehoge")
-        guard let buttons = self.view.subviews.first?.subviews.first?.subviews.first?.subviews else { return }
-        if let googleButton = buttons[0] as? UIButton {
-//            // アイコンにアクセスするコード
-//            print(googleButton.subviews)
-//            // ラベルにアクセスするコード
-//            print(googleButton.titleLabel)
-        }
         configureStackView()
-        configureButtons()
+        setUpButtons()
         authUI.delegate = self
+        print("view.descendantの結果：", view.descendant(UIButton.self))
+    }
+
+
+    ///  認証ボタンのレイアウトを整える
+    private func setUpButtons() {
+        for button in view.descendant(UIButton.self) {
+            configureSignInButton(button)
+        }
+    }
+
+    /// 指定のレイアウトのボタンを生成する
+    private func configureSignInButton(_ button: UIButton) {
+        var configuration = UIButton.Configuration.plain()
+        configuration.image = button.imageView?.image
+        configuration.imagePadding = 8
+        configuration.contentInsets = .init(top: 0, leading: 30, bottom: 0, trailing: 30)
+
+        button.layer.cornerRadius = 20.0
+        button.layer.masksToBounds = true
+
+        // ボタンのラベルが『"Sign in with Google"』なら『"Googleで続ける"』に変更する
+        // ⚠️仕様変更でキーワードが一致しなくなった場合、Googleボタンに『"Appleで続ける"』がセットされるとんでもない事態になりかねない。
+        // 🚨ローカライズのことを考慮できてない。
+        if button.titleLabel?.text == "Sign in with Google" {
+            var string = AttributedString(stringLiteral: "Googleで続ける")
+            string.font = .systemFont(ofSize: 12, weight: .semibold)
+
+            button.configurationUpdateHandler = { button in
+                //            string.foregroundColor = .green
+                string.foregroundColor = .black.withAlphaComponent(
+                    button.state == .highlighted ? 1.0 : 1.0
+                )
+                configuration.attributedTitle = string
+                button.configuration = configuration
+            }
+        } else {
+            var string = AttributedString(stringLiteral: "Appleで続ける")
+            string.font = .systemFont(ofSize: 12, weight: .semibold)
+
+            button.configurationUpdateHandler = { button in
+                string.foregroundColor = .white.withAlphaComponent(
+                    button.state == .highlighted ? 1.0 : 1.0
+                )
+                configuration.attributedTitle = string
+                button.configuration = configuration
+            }
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -66,46 +106,6 @@ final class CustomAuthPickerViewController: FUIAuthPickerViewController {
         NSLayoutConstraint.activate([
             stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 200)
-        ])
-    }
-
-    private func configureButtons() {
-        guard let buttons = self.view.subviews.first?.subviews.first?.subviews.first?.subviews else { return }
-        let titles = ["Googleでログイン", "Appleでログイン"]
-
-        for (index, _) in zip(titles.indices, titles) {
-            if let button = buttons[index] as? UIButton {
-                button.setTitle(titles[index], for: .normal)
-                button.layer.cornerRadius = 20.0
-                button.layer.masksToBounds = true
-            }
-        }
-
-        guard let googleButton = buttons[0] as? UIButton else { return }
-        let googleIcon = googleButton.subviews[0]
-        let googleLabel = googleButton.subviews[1]
-        googleIcon.translatesAutoresizingMaskIntoConstraints = false
-        // 😨Labelの.translatesAutoresizingMaskIntoConstraintsにfalseを代入した時点で『Unable to simultaneously satisfy constraints.』が発生するようになる。
-//        googleLabel.translatesAutoresizingMaskIntoConstraints = false
-
-        guard let appleButton = buttons[1] as? UIButton else{ return }
-        let appleIcon = appleButton.subviews[0]
-        let appleLabel = appleButton.subviews[1]
-        appleIcon.translatesAutoresizingMaskIntoConstraints = false
-        // 😨Labelの.translatesAutoresizingMaskIntoConstraintsにfalseを代入した時点で『Unable to simultaneously satisfy constraints.』が発生するようになる。
-//        appleLabel.translatesAutoresizingMaskIntoConstraints = false
-
-        // AutoLayoutを実装
-        NSLayoutConstraint.activate([
-            googleIcon.centerYAnchor.constraint(equalTo: googleButton.centerYAnchor),
-            googleIcon.leadingAnchor.constraint(equalTo: googleButton.leadingAnchor, constant: 40),
-//            googleLabel.centerYAnchor.constraint(equalTo: googleButton.centerYAnchor),
-//            googleLabel.leadingAnchor.constraint(equalTo: googleIcon.trailingAnchor),
-
-            appleIcon.centerYAnchor.constraint(equalTo: appleButton.centerYAnchor),
-            appleIcon.leadingAnchor.constraint(equalTo: appleButton.leadingAnchor, constant: 40),
-//            appleLabel.centerYAnchor.constraint(equalTo: appleButton.centerYAnchor),
-//            appleLabel.leadingAnchor.constraint(equalTo: appleIcon.trailingAnchor)
         ])
     }
 
